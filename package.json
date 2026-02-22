@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://01Sachinc.github.io/portfolio",
+  "homepage": "https://01Sachinc.github.io/sachin-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
