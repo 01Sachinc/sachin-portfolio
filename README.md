@@ -6,7 +6,7 @@ A premium, interactive 3D portfolio showcasing my expertise as a Full Stack Deve
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://01Sachinc.github.io/portfolio)
+[View Live Portfolio]([(https://01Sachinc.github.io/sachin-portfolio/))
 
 ## ✨ Key Features
 
