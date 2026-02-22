@@ -1,55 +1,74 @@
 # Sachin C S - Professional Portfolio
 
-Built with **React (Vite)**, **Tailwind CSS**, and **Framer Motion**. Deployed on **AWS**.
+![Hero Dark](public/screenshots/hero_dark.png)
+
+A premium, interactive 3D portfolio showcasing my expertise as a Full Stack Developer and DevOps Architect. Built with React, Tailwind CSS, Framer Motion, and Three.js, this portfolio is designed to be highly engaging, performant, and fully responsive.
 
 ## 🚀 Live Demo
-[sachincs.dev](https://sachincs.dev) *(Replace with your domain after deployment)*
 
-## 🛠 Tech Stack
-- **Frontend:** React 18, Vite
-- **Styling:** Tailwind CSS (Custom Dark Theme + Glassmorphism)
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
-- **Hosting:** AWS S3 + CloudFront
-- **CI/CD:** GitHub Actions
+[View Live Portfolio](https://01Sachinc.github.io/portfolio)
 
-## 📂 Project Structure
-```text
-/src
-  /components     # Reusable UI components (Navbar, Footer, etc.)
-  /sections       # Main page sections (Hero, About, Projects, etc.)
-  /data           # Centralized content and data files
-  /styles         # Global CSS and Tailwind configuration
-  /hooks          # Custom React hooks
-App.jsx           # Main application entry point
-main.jsx          # React DOM rendering
-```
+## ✨ Key Features
 
-## ⚙️ Environment Variables
-Create a `.env` file in the root directory:
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
+- **DevOps Aesthetic**: A unique terminal-inspired hero section, "syncing node" scroll loader, and git-commit style professional timeline.
+- **Premium Glassmorphism**: High-quality transparent, frosted glass cards using modern CSS `backdrop-filter`.
+- **Advanced Animations**: Fluid character dropping, staggered terminal typing, and scroll-triggered section entrances using `framer-motion` and `gsap`.
+- **Dual Themes**: Complete, meticulously crafted Dark and Light modes engineered for optimal readability and contrast.
+- **3D Elements**: Interactive cursor glow and dynamic background elements utilizing `@react-three/fiber` and `@react-three/drei`.
+- **Functional Contact Form**: Integrated with EmailJS for seamless, direct messaging with visual state feedback.
 
-## 🛠 Setup & Launch
-1. Clone the repository
-2. Install dependencies:
+## 💻 Tech Stack
+
+- **Frontend**: React 19, Vite
+- **Styling**: Tailwind CSS v4, Custom CSS variables for themeing
+- **Animation**: Framer Motion, GSAP, ScrollTrigger
+- **3D Graphics**: Three.js, React Three Fiber
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages
+- **Integrations**: EmailJS (Contact Form)
+
+## 📸 Gallery
+
+### Dark Theme vs. Light Theme
+*Engineered for perfection in any lighting environment.*
+
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| ![Projects Dark](public/screenshots/projects_dark.png) | ![Projects Light](public/screenshots/projects_light.png) |
+
+## 🛠️ Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/01Sachinc/sachin-portfolio.git
+   cd sachin-portfolio
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-3. Run in development mode:
+
+3. **Set up EmailJS (Optional):**
+   - Head over to `src/components/Contact.jsx`
+   - Replace the `YOUR_TEMPLATE_ID` and `YOUR_PUBLIC_KEY` placeholders with your actual EmailJS credentials.
+
+4. **Start the development server:**
    ```bash
    npm run dev
    ```
-4. Build for production:
-   ```bash
-   npm run build
-   ```
 
-## ☁️ Deployment
-For detailed AWS deployment instructions, see [AWS_DEPLOYMENT.md](file:///c:/Users/cssac/Downloads/DevOps/docs/AWS_DEPLOYMENT.md).
+## 📦 Deployment
+
+This project is configured to deploy to GitHub pages automatically via the `gh-pages` branch.
+
+```bash
+npm run deploy
+```
 
 ## 📄 License
-MIT License - Copyright (c) 2026 Sachin C S
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+*Designed & Built by Sachin C S*
