@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -55,6 +56,7 @@ function App() {
       <footer className="py-12 border-t border-white/5 text-center text-gray-500 text-sm font-heading tracking-widest uppercase">
         <p>© {new Date().getFullYear()} Sachin C S. All Rights Reserved.</p>
       </footer>
+      <Analytics />
     </div>
   )
 }

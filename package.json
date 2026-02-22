@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://01Sachinc.github.io/sachin-portfolio/",
+  "homepage": "https://sachin-portfolio-fawn.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +17,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "@tailwindcss/vite": "^4.2.0",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.3",
     "gh-pages": "^6.3.0",
