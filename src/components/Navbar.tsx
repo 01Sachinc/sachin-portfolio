@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { NAV_LINKS, SOCIAL_LINKS } from '../constants';
-import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +23,27 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <Logo size={36} className="text-white" />
+          <a 
+            href="#hero" 
+            className="group relative flex items-center"
+          >
+            <motion.span 
+              animate={{ 
+                letterSpacing: scrolled ? "0.4em" : "0.2em",
+                scale: scrolled ? 0.9 : 1
+              }}
+              className="text-2xl font-black font-heading text-white tracking-[0.2em] group-hover:text-primary-400 transition-colors duration-500"
+            >
+              SACHIN
+            </motion.span>
+            <motion.div 
+              animate={{ 
+                width: scrolled ? "100%" : "0%",
+                opacity: scrolled ? 1 : 0
+              }}
+              className="absolute -bottom-1 left-0 h-0.5 bg-primary-500 rounded-full"
+            />
+          </a>
         </motion.div>
 
         {/* Desktop Links */}

@@ -11,33 +11,28 @@ import Footer from './components/Footer'
 import ThreeBackground from './components/ThreeBackground'
 import CustomCursor from './components/CustomCursor'
 import Reveal from './components/Reveal'
+import DeviceSwitcher from './components/DeviceSwitcher'
 
 function App() {
   return (
-    <div className="min-h-screen relative text-slate-200 cursor-none">
+    <div className="min-h-screen relative text-slate-200 cursor-none overflow-hidden">
       <CustomCursor />
-      {/* Premium 3D Background */}
       <ThreeBackground />
 
-      {/* Scroll Progress Indicator */}
-      <ScrollProgress />
-      
-      {/* Navigation */}
-      <Navbar />
-      
-      {/* Content */}
-      <main>
-        <Hero />
-        <Reveal><About /></Reveal>
-        <Reveal><Skills /></Reveal>
-        <Reveal><Projects /></Reveal>
-        <Reveal><Certifications /></Reveal>
-        <Reveal><GitHubRepos /></Reveal>
-        <Reveal><Contact /></Reveal>
-      </main>
-      
-      {/* Footer */}
-      <Footer />
+      <DeviceSwitcher>
+        <ScrollProgress />
+        <Navbar />
+        <main>
+          <Hero />
+          <Reveal><About /></Reveal>
+          <Reveal><Skills /></Reveal>
+          <Reveal><Projects /></Reveal>
+          <Reveal><Certifications /></Reveal>
+          <Reveal><GitHubRepos /></Reveal>
+          <Reveal><Contact /></Reveal>
+        </main>
+        <Footer />
+      </DeviceSwitcher>
     </div>
   )
 }

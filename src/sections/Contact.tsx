@@ -5,20 +5,20 @@ import { SOCIAL_LINKS } from '../constants';
 
 const ContactItem = ({ icon, label, value, onCopy, copied }: any) => {
   return (
-    <div className="glass-card p-10 rounded-[2.5rem] flex items-center gap-8 group relative overflow-hidden">
+    <div className="glass-card p-6 rounded-2xl flex items-center gap-6 group relative overflow-hidden transition-all duration-500 hover:border-primary-500/30">
        <div className="absolute inset-0 bg-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-       <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-400 group-hover:bg-primary-500 group-hover:text-white transition-all duration-500 shadow-xl group-hover:shadow-primary-500/40 border border-white/5">
+       <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-400 group-hover:bg-primary-500 group-hover:text-white transition-all duration-500 shadow-lg group-hover:shadow-primary-500/40 border border-white/5">
          {icon}
        </div>
        <div className="flex-1 min-w-0">
-          <div className="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em] mb-1">{label}</div>
-          <div className="text-xl font-bold text-slate-100 truncate group-hover:text-primary-400 transition-colors duration-500">{value}</div>
+          <div className="text-[9px] text-slate-500 font-bold uppercase tracking-widest mb-0.5">{label}</div>
+          <div className="text-base font-bold text-slate-100 truncate group-hover:text-primary-400 transition-colors duration-500">{value}</div>
        </div>
        <button 
          onClick={() => onCopy(value, label)}
-         className="w-12 h-12 rounded-xl flex items-center justify-center text-slate-500 hover:text-primary-400 hover:bg-white/5 transition-all"
+         className="w-10 h-10 rounded-lg flex items-center justify-center text-slate-500 hover:text-primary-400 hover:bg-white/5 transition-all"
        >
-         {copied === label ? <Check size={20} className="text-green-500" /> : <Copy size={20} />}
+         {copied === label ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
        </button>
     </div>
   );
@@ -80,14 +80,14 @@ const Contact = () => {
             copied={copied} 
           />
 
-          <div className="grid grid-cols-2 gap-6 mt-8">
-             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="glass-card p-10 rounded-[2.5rem] flex flex-col items-center gap-4 hover:border-primary-500/40 transition-all duration-500 group">
-                <Github size={32} className="text-slate-500 group-hover:text-primary-400 transition-colors" />
-                <span className="text-sm font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-white">GitHub</span>
+          <div className="grid grid-cols-2 gap-4 mt-8">
+             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-primary-500/40 transition-all duration-500 group">
+                <Github size={24} className="text-slate-500 group-hover:text-primary-400 transition-colors" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 group-hover:text-white">GitHub</span>
              </a>
-             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="glass-card p-10 rounded-[2.5rem] flex flex-col items-center gap-4 hover:border-primary-500/40 transition-all duration-500 group">
-                <Linkedin size={32} className="text-slate-500 group-hover:text-primary-400 transition-colors" />
-                <span className="text-sm font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-white">LinkedIn</span>
+             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-primary-500/40 transition-all duration-500 group">
+                <Linkedin size={24} className="text-slate-500 group-hover:text-primary-400 transition-colors" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 group-hover:text-white">LinkedIn</span>
              </a>
           </div>
         </motion.div>

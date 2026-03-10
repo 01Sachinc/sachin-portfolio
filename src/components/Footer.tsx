@@ -7,11 +7,9 @@ const Footer = () => {
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex flex-col items-center md:items-start group">
-          <div className="flex items-center gap-3 mb-2">
-            <Logo size={24} className="text-white opacity-80 group-hover:opacity-100 transition-opacity" />
-            <span className="text-lg font-black font-heading tracking-tighter">SACHIN<span className="text-primary-500">CS</span></span>
+          <div className="flex items-center gap-3">
+            <Logo size={32} className="text-white opacity-80 group-hover:opacity-100 transition-opacity" />
           </div>
-          <p className="text-slate-500 text-sm">Cloud & DevOps Engineer</p>
         </div>
 
         <div className="flex items-center gap-6">

@@ -28,30 +28,21 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
         style={{ background }}
       />
 
-      {/* Project Image Placeholder / Abstract Visual */}
-      <div className="relative h-64 bg-dark-lighter overflow-hidden border-b border-white/5">
-         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-blue-600/5 group-hover:scale-110 transition-transform duration-1000" />
-         {project.image && (
-           <img 
-            src={project.image} 
-            alt={project.title} 
-            className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700"
-           />
-         )}
-         <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-         <div className="absolute top-6 right-6 p-3 bg-dark-card/50 backdrop-blur-md rounded-xl border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
-            <ArrowUpRight size={20} />
-         </div>
-      </div>
-
-      <div className="p-10 relative z-10">
-        <div className="flex flex-wrap gap-2 mb-6">
+      {/* Clean Header Area for Minimalist Look */}
+      <div className="relative pt-10 px-10 pb-4 border-b border-white/5 bg-dark-lighter/30">
+        <div className="flex flex-wrap gap-2">
           {project.tech.map((t: string) => (
-            <span key={t} className="text-[10px] px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-400 font-bold uppercase tracking-wider">
+            <span key={t} className="text-[9px] px-2 py-0.5 rounded-md bg-primary-500/5 border border-primary-500/10 text-primary-400 font-bold uppercase tracking-widest">
               {t}
             </span>
           ))}
         </div>
+        <div className="absolute top-8 right-8 text-slate-500 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
+           <ArrowUpRight size={18} />
+        </div>
+      </div>
+
+      <div className="p-10 relative z-10">
         <h3 className="text-2xl font-black font-heading mb-4 text-slate-100 group-hover:text-primary-400 transition-colors">
           {project.title}
         </h3>
