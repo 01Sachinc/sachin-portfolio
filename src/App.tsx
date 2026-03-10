@@ -9,10 +9,12 @@ import GitHubRepos from './sections/GitHubRepos'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
 import ThreeBackground from './components/ThreeBackground'
+import Reveal from './components/Reveal'
 
 function App() {
   return (
-    <div className="min-h-screen relative text-slate-200">
+    <div className="min-h-screen relative text-slate-200 cursor-none">
+      <CustomCursor />
       {/* Premium 3D Background */}
       <ThreeBackground />
 
@@ -25,12 +27,12 @@ function App() {
       {/* Content */}
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Certifications />
-        <GitHubRepos />
-        <Contact />
+        <Reveal><About /></Reveal>
+        <Reveal><Skills /></Reveal>
+        <Reveal><Projects /></Reveal>
+        <Reveal><Certifications /></Reveal>
+        <Reveal><GitHubRepos /></Reveal>
+        <Reveal><Contact /></Reveal>
       </main>
       
       {/* Footer */}

@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Award, BookOpen, Briefcase } from 'lucide-react';
+import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { Award, BookOpen, Briefcase, ExternalLink } from 'lucide-react';
 
 const certifications = [
   {
@@ -22,6 +22,51 @@ const certifications = [
   }
 ];
 
+const CertCard = ({ cert, index }: { cert: any, index: number }) => {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }: any) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  const background = useMotionTemplate`radial-gradient(300px circle at ${mouseX}px ${mouseY}px, rgba(14, 165, 233, 0.1), transparent 85%)`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      onMouseMove={handleMouseMove}
+      transition={{ delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative glass-card p-10 rounded-[2rem] border-white/5 hover:border-primary-500/20 transition-all duration-500 overflow-hidden"
+    >
+      <motion.div
+        className="pointer-events-none absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ background }}
+      />
+      
+      <div className="relative z-10">
+        <div className="w-16 h-16 rounded-[1.25rem] bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary-500/10 transition-all duration-500 border border-white/5">
+          {cert.icon}
+        </div>
+        <h3 className="text-2xl font-black font-heading mb-3 text-slate-100 group-hover:text-primary-400 transition-colors">
+          {cert.title}
+        </h3>
+        <p className="text-primary-500 font-bold uppercase tracking-[0.2em] text-xs mb-6 px-3 py-1 bg-primary-500/5 rounded-full inline-block">
+          {cert.issuer}
+        </p>
+        <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/5 text-slate-500 text-sm font-bold">
+          <span>{cert.date}</span>
+          <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 group-hover:text-primary-400 transition-all" />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 const Certifications = () => {
   return (
     <section id="certifications" className="section-padding">
@@ -40,21 +85,7 @@ const Certifications = () => {
 
       <div className="grid md:grid-cols-3 gap-8">
         {certifications.map((cert, index) => (
-          <motion.div
-            key={cert.title}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 rounded-3xl relative group"
-          >
-            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              {cert.icon}
-            </div>
-            <h3 className="text-xl font-bold font-heading mb-2 text-slate-100">{cert.title}</h3>
-            <p className="text-primary-500 font-medium text-sm mb-4">{cert.issuer}</p>
-            <div className="text-slate-500 text-sm">{cert.date}</div>
-          </motion.div>
+          <CertCard key={cert.title} cert={cert} index={index} />
         ))}
       </div>
     </section>
