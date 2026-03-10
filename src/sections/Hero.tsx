@@ -3,6 +3,43 @@ import { Typewriter } from 'react-simple-typewriter';
 import { ChevronRight, Download } from 'lucide-react';
 import { SOCIAL_LINKS } from '../constants';
 
+const NeuralMesh = () => {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity duration-1000">
+      {[...Array(20)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ 
+            x: Math.random() * 100 + "%", 
+            y: Math.random() * 100 + "%",
+            scale: Math.random() * 0.5 + 0.5 
+          }}
+          animate={{ 
+            x: [null, Math.random() * 100 + "%"],
+            y: [null, Math.random() * 100 + "%"]
+          }}
+          transition={{ 
+            duration: Math.random() * 20 + 20, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
+          className="absolute w-1 h-1 bg-primary-400 rounded-full blur-[1px]"
+        />
+      ))}
+      <svg className="absolute inset-0 w-full h-full opacity-10">
+        <motion.path
+          d="M 10 10 L 90 90 M 10 90 L 90 10"
+          stroke="white"
+          strokeWidth="0.5"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </svg>
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-[110vh] flex items-center pt-20 overflow-hidden">
@@ -54,10 +91,21 @@ const Hero = () => {
             </span>
           </h2>
           
-          <p className="text-xl text-slate-400 mb-12 max-w-xl leading-relaxed font-medium">
-            Bridging the gap between robust software engineering and high-performance cloud infrastructure. 
-            <span className="text-slate-100 italic"> Focus on automation, AI/ML monitoring, and security.</span>
-          </p>
+          <div className="mb-12">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="text-primary-400 font-black text-lg tracking-[0.2em] mb-4 flex items-center gap-4"
+            >
+              <span className="text-white opacity-50">★★</span>
+              BUILDING RESILIENT SYSTEMS
+              <span className="text-white opacity-50">★★</span>
+            </motion.div>
+            <p className="text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
+              Bridging the gap between robust software engineering and high-performance cloud infrastructure. 
+              <span className="text-slate-100 italic"> Focus on automation, AI/ML monitoring, and security.</span>
+            </p>
+          </div>
           
           <div className="flex flex-wrap gap-6">
             <motion.a
@@ -83,41 +131,61 @@ const Hero = () => {
 
         {/* Cinematic Decoration */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-          className="hidden lg:block relative"
+           initial={{ opacity: 0, scale: 0.9 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+           className="hidden lg:block relative group"
         >
           <div className="relative w-full aspect-square flex items-center justify-center">
-            {/* Animated Rings */}
-            <div className="absolute inset-0 border-2 border-primary-500/10 rounded-full animate-[spin_30s_linear_infinite]" />
-            <div className="absolute inset-[10%] border border-primary-500/5 rounded-full animate-[spin_20s_linear_infinite_reverse]" />
-            <div className="absolute inset-[20%] border-2 border-dashed border-primary-500/10 rounded-full animate-[spin_40s_linear_infinite]" />
+            {/* Neural Background */}
+            <NeuralMesh />
             
-            {/* Inner Content Card */}
+            {/* Inner Content Card - Glossy Overhaul */}
             <motion.div 
-              whileHover={{ rotateY: 10, rotateX: -10 }}
-              className="relative z-10 w-[80%] aspect-square glass-dark rounded-[3rem] border-white/10 flex flex-col items-center justify-center p-12 transition-all duration-500 shadow-3xl overflow-hidden group"
+               whileHover={{ rotateY: 15, rotateX: -15, scale: 1.05 }}
+               className="relative z-10 w-[85%] aspect-square glossy rounded-[4rem] flex flex-col items-center justify-center p-16 transition-all duration-700 shadow-[0_0_50px_-10px_rgba(56,189,248,0.2)] overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-blue-500/5 group-hover:scale-110 transition-transform duration-700" />
-              <div className="text-8xl font-black text-white/5 group-hover:text-primary-400/10 transition-colors tracking-tighter duration-700">
-                SCSI
-              </div>
-              <div className="mt-4 text-primary-400 font-bold uppercase tracking-[0.4em] text-sm opacity-50 group-hover:opacity-100 transition-opacity">
-                Engineering Excellence
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/5 via-white/5 to-blue-500/10 pointer-events-none" />
+              
+              <div className="relative z-10 text-center">
+                 <div className="text-8xl font-black text-white/5 tracking-tighter mb-4 group-hover:text-primary-400/20 transition-all duration-700">
+                   TECH
+                 </div>
+                 <div className="h-0.5 w-24 bg-primary-500 mb-8 mx-auto group-hover:w-48 transition-all duration-700" />
+                 <div className="text-primary-400 font-black uppercase tracking-[0.5em] text-xs">
+                   SYSTEMS ARCHITECT
+                 </div>
               </div>
 
-               {/* Floating Badges */}
+               {/* Floating Badges - Enhanced */}
               <motion.div 
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-20 -right-10 glass px-6 py-4 rounded-3xl shadow-3xl border-white/20"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-10 -right-8 glass-card px-8 py-5 rounded-[2rem] border-white/20 shadow-2xl transform rotate-6"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary-500/20 flex items-center justify-center text-xl font-bold text-primary-400">AWS</div>
+                  <div className="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/40">
+                    <span className="text-xl font-black text-white">AWS</span>
+                  </div>
                   <div>
-                    <div className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Certified</div>
-                    <div className="text-sm font-bold">Solutions Architect</div>
+                    <div className="text-[10px] text-primary-400 uppercase font-black tracking-widest leading-none mb-1">Elite Tier</div>
+                    <div className="text-sm font-black text-white">Cloud Architect</div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                animate={{ y: [0, 15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute bottom-10 -left-8 glass-card px-8 py-5 rounded-[2rem] border-white/20 shadow-2xl transform -rotate-6"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/40">
+                    <span className="text-xl font-black text-white">Java</span>
+                  </div>
+                  <div>
+                    <div className="text-[10px] text-orange-400 uppercase font-black tracking-widest leading-none mb-1">Back-end</div>
+                    <div className="text-sm font-black text-white">Core Engineer</div>
                   </div>
                 </div>
               </motion.div>

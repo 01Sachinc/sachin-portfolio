@@ -9,6 +9,7 @@ import GitHubRepos from './sections/GitHubRepos'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
 import ThreeBackground from './components/ThreeBackground'
+import CustomCursor from './components/CustomCursor'
 import Reveal from './components/Reveal'
 
 function App() {

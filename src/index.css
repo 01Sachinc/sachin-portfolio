@@ -92,6 +92,36 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  .glossy {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glossy::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 55%
+    );
+    animation: shine 6s infinite;
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }

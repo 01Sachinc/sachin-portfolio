@@ -25,20 +25,32 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="glass-card p-8 rounded-3xl"
+            className="glass-card rounded-3xl overflow-hidden group"
           >
-            <h3 className="text-xl font-bold font-heading mb-6 text-slate-100 flex items-center gap-3">
-              <span className="w-1.5 h-6 bg-primary-500 rounded-full" />
-              {skill.category}
-            </h3>
-            <ul className="space-y-4">
-              {skill.items.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-slate-400 hover:text-primary-300 transition-colors">
-                  <div className="w-1 h-1 bg-primary-500/50 rounded-full" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {skill.image && (
+              <div className="h-40 overflow-hidden relative border-b border-white/5">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent z-10" />
+                <img 
+                  src={skill.image} 
+                  alt={skill.category} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                />
+              </div>
+            )}
+            <div className="p-8">
+              <h3 className="text-xl font-bold font-heading mb-6 text-slate-100 flex items-center gap-3">
+                <span className="w-1.5 h-6 bg-primary-500 rounded-full" />
+                {skill.category}
+              </h3>
+              <ul className="space-y-4">
+                {skill.items.map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-slate-400 hover:text-primary-300 transition-colors">
+                    <div className="w-1 h-1 bg-primary-500/50 rounded-full" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         ))}
       </div>

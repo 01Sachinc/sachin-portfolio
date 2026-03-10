@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { NAV_LINKS, SOCIAL_LINKS } from '../constants';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +17,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'glossy py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-bold font-heading text-gradient"
+          className="flex items-center"
         >
-          Sachin C S
+          <Logo size={36} className="text-white" />
         </motion.div>
 
         {/* Desktop Links */}

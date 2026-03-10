@@ -35,9 +35,10 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
            <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+            className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700"
            />
          )}
+         <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
          <div className="absolute top-6 right-6 p-3 bg-dark-card/50 backdrop-blur-md rounded-xl border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
             <ArrowUpRight size={20} />
          </div>
