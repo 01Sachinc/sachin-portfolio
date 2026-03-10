@@ -44,8 +44,8 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-[110vh] flex items-center pt-20 overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-primary-500/10 rounded-full blur-[150px] animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 -left-20 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary-500/10 rounded-full blur-[100px] md:blur-[150px] animate-pulse" />
+      <div className="absolute bottom-1/4 -right-20 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-500/10 rounded-full blur-[100px] md:blur-[150px]" />
 
       <div className="section-padding flex flex-col items-center justify-center text-center w-full relative z-10 min-h-[90vh]">
         <motion.div
@@ -54,16 +54,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary-500/20 bg-primary-500/5 text-primary-400 text-[10px] font-black uppercase tracking-[0.4em] mb-12"
-          >
-            Available for Strategic Partnerships
-          </motion.div>
-          
-          <h1 className="text-7xl md:text-[10rem] font-black font-heading mb-12 tracking-tighter leading-[0.8] text-white">
+          <h1 className="text-6xl md:text-[10rem] font-black font-heading mb-12 tracking-tighter leading-[0.85] text-white">
             ARCHITECT <br />
             <span className="text-gradient drop-shadow-[0_0_50px_rgba(56,189,248,0.3)]">SCALABLE</span> <br />
             SOLUTIONS

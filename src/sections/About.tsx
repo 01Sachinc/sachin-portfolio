@@ -23,7 +23,7 @@ const About = () => {
            viewport={{ once: true }}
            className="lg:col-span-12 xl:col-span-8 glass-card p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 rounded-full blur-[100px] -mr-32 -mt-32 group-hover:bg-primary-500/10 transition-colors duration-700" />
+          <div className="absolute top-0 right-0 w-32 md:w-64 h-32 md:h-64 bg-primary-500/5 rounded-full blur-[60px] md:blur-[100px] -mr-16 md:-mr-32 -mt-16 md:-mt-32 group-hover:bg-primary-500/10 transition-colors duration-700" />
           <h3 className="text-3xl md:text-4xl font-bold font-heading mb-8 text-slate-100 leading-tight">
             I bridge the gap between <span className="text-primary-400">Software Engineering</span> and <span className="text-blue-500">Cloud Infrastructure</span>.
           </h3>

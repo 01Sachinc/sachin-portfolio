@@ -80,28 +80,28 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-dark border-t border-white/10 overflow-hidden"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="md:hidden glass-dark border-t border-white/10 overflow-hidden fixed inset-x-0 top-[76px] bottom-0 z-40 bg-dark/95 backdrop-blur-2xl"
           >
-            <div className="px-6 py-6 flex flex-col space-y-4">
+            <div className="px-10 py-16 flex flex-col items-center justify-center space-y-12 h-full">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-slate-300 hover:text-primary-400"
+                  className="text-4xl font-black font-heading text-slate-300 hover:text-primary-400 transition-colors uppercase tracking-[0.2em]"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="flex space-x-6 pt-4 border-t border-white/5">
-                <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
-                  <Github size={24} />
+              <div className="flex space-x-10 pt-12 border-t border-white/10 w-full justify-center">
+                <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="p-4 rounded-2xl bg-white/5 text-slate-400 hover:text-white transition-all">
+                  <Github size={32} />
                 </a>
-                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
-                  <Linkedin size={24} />
+                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 rounded-2xl bg-white/5 text-slate-400 hover:text-white transition-all">
+                  <Linkedin size={32} />
                 </a>
               </div>
             </div>

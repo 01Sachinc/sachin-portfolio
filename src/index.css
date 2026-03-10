@@ -23,7 +23,8 @@
   --animate-gradient: gradient 8s linear infinite;
 
   @keyframes gradient {
-    0%, 100% {
+    0%,
+    100% {
       background-size: 200% 200%;
       background-position: left center;
     }
@@ -48,7 +49,12 @@
     @apply bg-dark text-slate-200 overflow-x-hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
@@ -80,7 +86,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto;
+    @apply py-20 md:py-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto;
   }
 
   .nav-blur {
@@ -102,7 +108,7 @@
   }
 
   .glossy::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -50%;
     left: -50%;
@@ -118,12 +124,21 @@
   }
 
   @keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%); }
-    100% { transform: translateX(100%) translateY(100%); }
+    0% {
+      transform: translateX(-100%) translateY(-100%);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%);
+    }
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 }

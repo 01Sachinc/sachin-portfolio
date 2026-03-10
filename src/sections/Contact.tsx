@@ -72,13 +72,7 @@ const Contact = () => {
             onCopy={copyToClipboard} 
             copied={copied} 
           />
-          <ContactItem 
-            icon={<Phone size={28} />} 
-            label="Direct Line" 
-            value={SOCIAL_LINKS.phone} 
-            onCopy={copyToClipboard} 
-            copied={copied} 
-          />
+
 
           <div className="grid grid-cols-2 gap-4 mt-8">
              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-primary-500/40 transition-all duration-500 group">

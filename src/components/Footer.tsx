@@ -5,12 +5,8 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className="border-t border-white/5 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex flex-col items-center md:items-start group">
-          <div className="flex items-center gap-3">
-            <Logo size={32} className="text-white opacity-80 group-hover:opacity-100 transition-opacity" />
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-8">
+
 
         <div className="flex items-center gap-6">
           <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 hover:bg-primary-500/10 text-slate-400 hover:text-primary-400 transition-all border border-white/5 hover:border-primary-500/20">
