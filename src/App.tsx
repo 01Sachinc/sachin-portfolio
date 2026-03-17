@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
@@ -42,13 +42,15 @@ function App() {
           {isLoading && <LoadingScreen key="loader" onComplete={() => setIsLoading(false)} />}
         </AnimatePresence>
 
-        <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0 invisible' : 'opacity-100 visible'}`}>
           <ScrollProgress />
           <Navbar />
           
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/project/cloudguardian-ai-x" element={<CloudGuardianProject />} />
+            {/* Catch-all route to redirect back to Home */}
+            <Route path="*" element={<Home />} />
           </Routes>
 
           <Footer />
