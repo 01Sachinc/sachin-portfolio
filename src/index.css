@@ -72,7 +72,7 @@
 }
 
 @utility glass-card {
-  @apply glass-dark hover:bg-white/5 transition-all duration-500 border-white/5 hover:border-primary-500/30 shadow-2xl hover:shadow-primary-500/10;
+  @apply glass-dark hover:bg-white/[0.03] transition-all duration-700 border-white/[0.05] hover:border-primary-500/20 shadow-2xl hover:shadow-primary-500/5 backdrop-blur-3xl;
 }
 
 @utility text-glow {
