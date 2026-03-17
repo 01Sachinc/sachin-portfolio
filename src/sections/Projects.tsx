@@ -60,6 +60,15 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
             <Github size={18} className="group-hover/link:scale-110 transition-transform" /> 
             Source Code
           </a>
+          {project.caseStudy && (
+            <a 
+              href={project.caseStudy}
+              className="flex items-center gap-2 text-sm font-bold text-primary-400 hover:text-primary-300 transition-colors group/link"
+            >
+              <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" /> 
+              Case Study
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

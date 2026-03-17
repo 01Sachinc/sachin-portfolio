@@ -44,6 +44,18 @@ const Navbar = () => {
               className="absolute -bottom-1 left-0 h-0.5 bg-primary-500 rounded-full"
             />
           </a>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="ml-6 hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/5 border border-green-500/10 text-[10px] font-black uppercase tracking-widest text-green-400"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            System: Operational
+          </motion.div>
         </motion.div>
 
         {/* Desktop Links */}

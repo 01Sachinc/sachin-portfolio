@@ -54,20 +54,30 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-xs font-black mb-8 uppercase tracking-widest backdrop-blur-md"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+            </span>
+            🚀 Built AI-Powered Self-Healing DevOps Platform
+          </motion.div>
           <h1 className="text-6xl md:text-[10rem] font-black font-heading mb-12 tracking-tighter leading-[0.85] text-white">
-            ARCHITECT <br />
-            <span className="text-gradient drop-shadow-[0_0_50px_rgba(56,189,248,0.3)]">SCALABLE</span> <br />
-            SOLUTIONS
+            ENGINEERING <br />
+            <span className="text-gradient drop-shadow-[0_0_50px_rgba(56,189,248,0.3)] italic">AUTONOMY</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-slate-400 font-bold mb-16 tracking-[0.2em] uppercase">
-             Sachin C S — {' '}
+          <h2 className="text-xl md:text-2xl text-slate-400 font-bold mb-10 tracking-[0.2em] uppercase">
             <span className="text-primary-400">
               <Typewriter
                 words={[
-                  'Cloud & DevOps Architect',
                   'Java Fullstack Engineer',
                   'Systems Specialist',
+                  'Cloud & DevOps Architect',
                 ]}
                 loop={0}
                 cursor
@@ -79,16 +89,16 @@ const Hero = () => {
             </span>
           </h2>
           
-          <div className="mb-16 flex flex-col items-center">
+          <div className="mb-10 flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-primary-400 font-black text-xs tracking-[0.6em] mb-8 uppercase"
+              className="text-primary-400 font-black text-[10px] tracking-[0.6em] mb-4 uppercase"
             >
               BUILDING RESILIENT INFRASTRUCTURE
             </motion.div>
             <p className="text-lg text-slate-500 max-w-2xl leading-relaxed font-medium">
-              Specializing in the fusion of robust software engineering and high-performance cloud operations. 
+              Specializing in <span className="text-white font-bold">Cloud-Native Architectures</span> and <span className="text-white font-bold">Autonomous DevOps</span>. 
               Focused on <span className="text-slate-300">automation, AI-driven monitoring, and enterprise security.</span>
             </p>
           </div>

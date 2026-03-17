@@ -19,6 +19,15 @@ export const SOCIAL_LINKS = {
 
 export const PROJECTS = [
   {
+    title: 'CloudGuardian AI X',
+    description: 'Autonomous Self-Healing DevOps platform with Kubernetes, Terraform, and AI-powered anomaly detection.',
+    tech: ['K8s', 'TPU/AI', 'Terraform', 'AWS', 'Python'],
+    github: 'https://github.com/01Sachinc/cloudguardian-ai-devops-platform',
+    caseStudy: '/project/cloudguardian-ai-x',
+    image: '/projects/cloud-guardian.png',
+    featured: true
+  },
+  {
     title: 'AI DevOps Monitoring Platform',
     description: 'Enterprise-grade monitoring with Docker, Terraform, Prometheus, and Python AI agents for real-time anomaly detection.',
     tech: ['Docker', 'Terraform', 'Python', 'Prometheus', 'Grafana'],
