@@ -72,7 +72,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-slate-400 font-bold mb-10 tracking-[0.2em] uppercase">
-            <span className="text-primary-400">
+            <span className="text-primary-400 font-mono">
               <Typewriter
                 words={[
                   'Java Fullstack Engineer',

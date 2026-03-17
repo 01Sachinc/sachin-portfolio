@@ -53,8 +53,8 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
           {project.title} <span className="text-primary-500/20 group-hover:text-primary-500/40 transition-colors">/&gt;</span>
         </h3>
         
-        <p className="text-slate-400 text-base leading-relaxed mb-12 flex-1 font-mono text-sm">
-           <span className="text-primary-500/50 mr-2">&gt;</span>
+        <p className="text-slate-400 text-base leading-relaxed mb-12 flex-1 font-mono text-xs">
+           <span className="text-primary-500/50 mr-2 opacity-50">&gt;</span>
            {project.description}
         </p>
         

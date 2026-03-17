@@ -47,22 +47,22 @@ const About = () => {
             I build the <span className="text-primary-400">Intelligence</span> between Software and <span className="text-blue-500 font-medium italic">Infrastructure.</span>
           </h3>
 
-          <div className="space-y-8 text-slate-400 text-lg leading-relaxed max-w-4xl font-mono">
+          <div className="space-y-8 text-slate-400 text-lg leading-relaxed max-w-4xl">
             <p className="flex gap-4">
-              <span className="text-primary-500 font-bold opacity-30">01</span>
+              <span className="text-primary-500 font-bold opacity-30 font-mono">01</span>
               <span>
-                Systems Architect and **Java Fullstack Engineer** with a passion for **Autonomous DevOps**. I don't just deploy; I engineer resilient ecosytems.
+                Systems Architect and **Java Fullstack Engineer** with a passion for **Autonomous DevOps**. I don't just deploy; I engineer resilient ecosystems.
               </span>
             </p>
             <p className="flex gap-4">
-              <span className="text-primary-500 font-bold opacity-30">02</span>
+              <span className="text-primary-500 font-bold opacity-30 font-mono">02</span>
               <span>
                 Specializing in AI-integrated monitoring and secure AWS cloud automation. My mission: Zero manual effort through **Infrastructure as Code**.
               </span>
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 p-8 rounded-3xl bg-black/40 border border-white/5 backdrop-blur-md">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 p-8 rounded-3xl bg-black/40 border border-white/5 backdrop-blur-md font-mono">
             {[
               { label: "Arch", value: "AWS", icon: Globe },
               { label: "Logic", value: "Java", icon: Terminal },
