@@ -42,7 +42,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           animate={{ y: 0, opacity: 1 }}
           className="mb-12 flex flex-col items-center"
         >
-          <div className="text-4xl md:text-6xl font-black font-heading tracking-tighter text-white mb-2">
+          <div className="text-4xl md:text-6xl font-black font-display tracking-tighter text-white mb-2">
             SACHIN <span className="text-primary-500">{" />"}</span>
           </div>
           <motion.div 

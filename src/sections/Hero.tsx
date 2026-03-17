@@ -66,7 +66,7 @@ const Hero = () => {
             </span>
             🚀 Built AI-Powered Self-Healing DevOps Platform
           </motion.div>
-          <h1 className="text-6xl md:text-[10rem] font-black font-heading mb-12 tracking-tighter leading-[0.85] text-white">
+          <h1 className="text-6xl md:text-[10rem] font-black font-display mb-12 tracking-tighter leading-[0.85] text-white">
             ENGINEERING <br />
             <span className="text-gradient drop-shadow-[0_0_50px_rgba(56,189,248,0.3)] italic">AUTONOMY</span>
           </h1>
