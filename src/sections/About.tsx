@@ -23,7 +23,7 @@ const About = () => {
           Perspective / Registry
         </motion.span>
         <h2 className="text-5xl md:text-7xl font-black font-display text-center leading-tight">
-          Core <span className="text-gradient drop-shadow-[0_0_30px_rgba(56,189,248,0.2)]">Module</span>
+          Core <span className="text-gradient drop-shadow-[0_0_30px_rgba(56,189,248,0.2)] italic">Module</span>
         </h2>
       </div>
 
@@ -43,8 +43,8 @@ const About = () => {
             <span className="text-[10px] font-black font-mono text-primary-500/50 tracking-tighter uppercase">ID: BRIDGE_OS_01</span>
           </div>
 
-          <h3 className="text-3xl md:text-5xl font-black font-display mb-10 text-white leading-[1.1]">
-            I build the <span className="text-primary-400">Intelligence</span> between Software and <span className="text-blue-500 font-medium italic">Infrastructure.</span>
+          <h3 className="text-3xl md:text-5xl font-bold font-accent mb-10 text-white leading-[1.1]">
+            I build the <span className="text-primary-400 font-display italic uppercase">Intelligence</span> between Software and <span className="text-blue-500 font-medium italic">Infrastructure.</span>
           </h3>
 
           <div className="space-y-8 text-slate-400 text-lg leading-relaxed max-w-4xl">

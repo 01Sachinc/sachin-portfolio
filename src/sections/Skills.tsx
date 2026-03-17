@@ -23,7 +23,7 @@ const Skills = () => {
         >
           Processing / Clusters
         </motion.span>
-        <h2 className="text-5xl md:text-7xl font-black font-display text-center leading-tight">
+        <h2 className="text-5xl md:text-7xl font-black font-heading text-center leading-tight uppercase tracking-tighter">
           System <span className="text-gradient drop-shadow-[0_0_30px_rgba(56,189,248,0.2)]">Logic</span>
         </h2>
       </div>

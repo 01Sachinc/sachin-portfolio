@@ -49,8 +49,8 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
           ))}
         </div>
 
-        <h3 className="text-3xl font-black font-display mb-6 text-white group-hover:text-primary-400 transition-colors leading-[1.1] tracking-tight">
-          {project.title} <span className="text-primary-500/20 group-hover:text-primary-500/40 transition-colors">/&gt;</span>
+        <h3 className="text-3xl font-black font-accent mb-6 text-white group-hover:text-primary-400 transition-colors leading-[1.1] tracking-tight">
+          {project.title} <span className="text-primary-500/20 group-hover:text-primary-500/40 transition-colors font-mono">/&gt;</span>
         </h3>
         
         <p className="text-slate-400 text-base leading-relaxed mb-12 flex-1 font-mono text-xs">
@@ -94,8 +94,8 @@ const Projects = () => {
         >
           Selected / Production
         </motion.span>
-        <h2 className="text-5xl md:text-7xl font-black font-display text-center leading-tight">
-          Deployed <span className="text-gradient drop-shadow-[0_0_30px_rgba(56,189,248,0.2)]">Envs</span>
+        <h2 className="text-5xl md:text-7xl font-black font-heading text-center leading-tight uppercase">
+          Deployed <span className="text-gradient drop-shadow-[0_0_30px_rgba(56,189,248,0.2)] italic">Envs</span>
         </h2>
       </div>
 
